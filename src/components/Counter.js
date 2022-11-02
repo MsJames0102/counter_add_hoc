@@ -1,5 +1,16 @@
-const Counter = () => {
-    return <h1>This comp should be the button that changes the count state</h1>
+const Counter = ({upCount, downCount}) => {
+const handleClick = () => {
+    upCount()
+}
+const handleClickOne = () => {
+    downCount()
+}
+
+    return (<>
+    <button onClick={handleClick}>Up</button>
+    <button onClick={handleClickOne}>Down</button>
+    </>)
+
 }
 
 export default Counter
